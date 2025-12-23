@@ -56,12 +56,8 @@ jobs:
           sed -i "s|image: .*|image: nobeldhakal123/nobel-techaxis-project:${IMAGE_TAG}|" deploy/deploy.yaml
 
       - name: Commit and push manifest changes
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}  # your new secret
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add deploy/deploy.yaml
-          git commit -m "chore: update image tag to ${{ steps.meta.outputs.version }} [skip ci]" || echo "No changes to commit"
-          git remote set-url origin https://x-access-token:${{ secrets.GH_PAT }}@github.com/Nobel-hub/Techaxis-final-project.git
-          git push origin main
+        uses: ad-m/github-push-action@v0.8.0
+        with:
+          github_token: ${{ secrets.GH_PAT }}
+          branch: main
+          message: "chore: update image tag to ${{ steps.meta.outputs.version }} [skip ci]"
