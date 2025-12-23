@@ -1,0 +1,19 @@
+apiVersion: eksctl.io/v1alpha5
+kind: ClusterConfig
+
+metadata:
+  name: noble-eks-cluster
+  region: us-east-1
+  version: "1.29"
+
+nodeGroups:
+  - name: ubuntu-ng
+    instanceType: m7i-flex.large
+    desiredCapacity: 4
+    minSize: 4
+    maxSize: 4
+    amiFamily: Ubuntu2204
+    volumeSize: 20
+    ssh:
+      allow: true
+
