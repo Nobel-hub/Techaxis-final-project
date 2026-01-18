@@ -22,10 +22,9 @@ jobs:
         with:
           args: >
             -Dsonar.projectKey=techaxis-final-project
-            -Dsonar.projectName=Techaxis Final Project
+            -Dsonar.projectName="Techaxis Final Project"
             -Dsonar.sources=.
             -Dsonar.language=go
-            -Dsonar.go.coverage.reportPaths=coverage.out
 
       - name: SonarQube Quality Gate
         uses: sonarsource/sonarqube-quality-gate-action@v1
