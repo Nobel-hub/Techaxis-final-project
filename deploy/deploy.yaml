@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: my-app
-        image: nobeldhakal123/nobel-techaxis-project:sha-cdfebd4
+        image: nobeldhakal123/nobel-techaxis-project:sha-b1dc942
         imagePullPolicy: Always
         env:
         - name: DB_USERNAME
