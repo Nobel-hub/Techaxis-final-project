@@ -1,0 +1,12 @@
+- name: Install Prometheus + Grafana on ec2-1
+  hosts: ec2-1
+  become: yes
+  roles:
+    - prometheus_grafana
+
+- name: Install SonarQube on ec2-2
+  hosts: ec2-2
+  become: yes
+  roles:
+    - sonarqube
+

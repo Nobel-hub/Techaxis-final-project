@@ -1,0 +1,2 @@
+ec2-1 ansible_host=44.203.243.5 ansible_user=ubuntu ansible_ssh_private_key_file=../demo-nobel-keypair.pem
+ec2-2 ansible_host=44.200.60.154 ansible_user=ubuntu ansible_ssh_private_key_file=../demo-nobel-keypair.pem
